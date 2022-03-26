@@ -9,7 +9,7 @@ source:
   sha256: f63f62fc60e6228a4ca9abae28228f35e1bd3ce675013d1dfb828688d50c6e23
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -19,7 +19,8 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
-    - libxml2
+    # pin should be fixed next in release. https://bugs.launchpad.net/lxml/+bug/1928795
+    - libxml2 <2.9.11
     - python
     - pip
     - cython
