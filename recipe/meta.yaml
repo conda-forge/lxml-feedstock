@@ -25,6 +25,7 @@ requirements:
     - pip
     - cython
     - libxslt
+    - libzlib
   run:
     - python
     - libxslt
