@@ -11,7 +11,7 @@ source:
 build:
   number: 1
   script:
-    - set "PKG_CONFIG_PATH=%LIBRARY_LIB%\pkgconfig;%LIBRARY_PREFIX%\share\pkgconfig"  # [win]
+    - set "PKG_CONFIG=pkg-config.exe"  # [win]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,10 +20,10 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - pkg-config
   host:
     # exclusions due to https://bugs.launchpad.net/lxml/+bug/1928795
     - libxml2 !=2.9.11, !=2.9.12
-    - libxml2 2.9.14 hf5bbc77_0  # [win]
     - python
     - pip
     - cython
