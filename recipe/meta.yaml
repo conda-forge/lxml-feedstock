@@ -9,8 +9,10 @@ source:
   sha256: fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script:
+    - set "PKG_CONFIG_PATH=%LIBRARY_LIB%\pkgconfig;%LIBRARY_PREFIX%\share\pkgconfig"  # [win]
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -18,17 +20,16 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - pkg-config
   host:
-    # exclusions due to https://bugs.launchpad.net/lxml/+bug/1928795
-    - libxml2 !=2.9.11, !=2.9.12
+    - libxml2
     - python
     - pip
     - cython
     - libxslt
+    - zlib
   run:
     - python
-    - libxslt
-    - libxml2 !=2.9.11, !=2.9.12
 
 test:
   imports:

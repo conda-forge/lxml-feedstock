@@ -1,9 +1,11 @@
 c_compiler:
-- vs2017
+- vs2019
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+libxml2:
+- '2.10'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -12,3 +14,5 @@ python:
 - 3.8.* *_73_pypy
 target_platform:
 - win-64
+zlib:
+- '1.2'
