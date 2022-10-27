@@ -22,8 +22,7 @@ requirements:
     - {{ compiler('c') }}
     - pkg-config
   host:
-    # exclusions due to https://bugs.launchpad.net/lxml/+bug/1928795
-    - libxml2 !=2.9.11, !=2.9.12
+    - libxml2
     - python
     - pip
     - cython
@@ -31,7 +30,6 @@ requirements:
     - zlib
   run:
     - python
-    - libxml2 !=2.9.11, !=2.9.12
 
 test:
   imports:
