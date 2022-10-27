@@ -12,8 +12,7 @@ build:
   number: 1
   script:
     - set "PKG_CONFIG_PATH=%LIBRARY_LIB%\pkgconfig;%LIBRARY_PREFIX%\share\pkgconfig"  # [win]
-    - {{ PYTHON }} -m pip install . -vv --install-option=--with-xml2-config=  # [win]
-    - {{ PYTHON }} -m pip install . -vv  # [not win]
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -32,7 +31,6 @@ requirements:
     - zlib
   run:
     - python
-    - libxslt
     - libxml2 !=2.9.11, !=2.9.12
 
 test:
