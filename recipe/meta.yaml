@@ -23,7 +23,7 @@ requirements:
   host:
     # exclusions due to https://bugs.launchpad.net/lxml/+bug/1928795
     - libxml2 !=2.9.11, !=2.9.12
-    - libxml2 =2.9.14  # [win]
+    - libxml2 2.9.14 hf5bbc77_0  # [win]
     - python
     - pip
     - cython
