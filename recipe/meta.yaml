@@ -9,7 +9,7 @@ source:
   sha256: 2455cfaeb7ac70338b3257f41e21f0724f4b5b0c0e7702da67ee6c3640835b67
 
 build:
-  number: 0
+  number: 1
   script:
     - set "PKG_CONFIG_PATH=%LIBRARY_LIB%\pkgconfig;%LIBRARY_PREFIX%\share\pkgconfig"  # [win]
     - {{ PYTHON }} -m pip install . -vv
