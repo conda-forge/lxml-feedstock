@@ -404,4 +404,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@zklaus](https://github.com/zklaus/)
 
