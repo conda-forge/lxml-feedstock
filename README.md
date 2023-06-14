@@ -1,11 +1,11 @@
-About lxml
-==========
+About lxml-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lxml-feedstock/blob/main/LICENSE.txt)
 
 Home: http://lxml.de/
 
 Package license: BSD-3-Clause and GPL-2.0-only and ZPL-2.0 and LicenseRef-ElementTree
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lxml-feedstock/blob/main/LICENSE.txt)
 
 Summary: Pythonic binding for the C libraries libxml2 and libxslt.
 
@@ -404,4 +404,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@zklaus](https://github.com/zklaus/)
 
