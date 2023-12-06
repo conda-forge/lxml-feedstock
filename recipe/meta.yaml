@@ -11,7 +11,7 @@ source:
     - fix-initialization.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -37,12 +37,16 @@ test:
     - lxml.objectify
   requires:
     - pip
+    - jq  # [unix]
   commands:
     - pip check
+    # ensuring that test.py is not contained. Otherwise ZPL-2.0 and GPL-2.0-only licenses needs to be porpagated.
+    - test_file=$(jq '.files[] | select( . | endswith("/test.py"))' $CONDA_PREFIX/conda-meta/{{ PKG_NAME }}-{{ PKG_VERSION }}-${PKG_BUILD_STRING}.json)  # [unix]
+    - if [[ ${test_file} ]]; then echo "found test.py file being packaged ${test_file}"; exit 1; fi  # [unix]
 
 about:
   home: http://lxml.de/
-  license: BSD-3-Clause and GPL-2.0-only and ZPL-2.0 and LicenseRef-ElementTree
+  license: BSD-3-Clause and LicenseRef-ElementTree
   license_file: LICENSES.txt
   summary: Pythonic binding for the C libraries libxml2 and libxslt.
   description: |
