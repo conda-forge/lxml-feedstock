@@ -11,7 +11,7 @@ source:
     - fix-initialization.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -46,7 +46,8 @@ test:
 
 about:
   home: http://lxml.de/
-  license: BSD-3-Clause and LicenseRef-ElementTree
+  # ElementTree comes with a supposedly custom license that is simply MIT-CMU with a different copyright holder.
+  license: BSD-3-Clause and MIT-CMU
   license_file: LICENSES.txt
   summary: Pythonic binding for the C libraries libxml2 and libxslt.
   description: |
