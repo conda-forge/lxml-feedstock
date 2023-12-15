@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lxml-feedstock/
 
 Home: http://lxml.de/
 
-Package license: BSD-3-Clause and LicenseRef-ElementTree
+Package license: BSD-3-Clause and MIT-CMU
 
 Summary: Pythonic binding for the C libraries libxml2 and libxslt.
 
