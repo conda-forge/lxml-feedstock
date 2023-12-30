@@ -7,8 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/l/lxml/lxml-{{ version }}.tar.gz
   sha256: 9165c82bcccf0249feff82cd1fba202e4ce26c25dc69040a0d2c2d0e49cbeba3
-  patches:
-    - fix-initialization.patch
 
 build:
   number: 0
