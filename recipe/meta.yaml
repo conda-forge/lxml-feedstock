@@ -1,4 +1,4 @@
-{% set version = "4.9.4" %}
+{% set version = "5.0.1" %}
 
 package:
   name: lxml
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/l/lxml/lxml-{{ version }}.tar.gz
-  sha256: b1541e50b78e15fa06a2670157a1962ef06591d4c998b998047fff5e3236880e
+  sha256: 4432a1d89a9b340bc6bd1201aef3ba03112f151d3f340d9218247dc0c85028ab
   patches:
     - fix-initialization.patch
     - fix_libxml2_2.12.patch
