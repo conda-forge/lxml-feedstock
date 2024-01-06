@@ -9,6 +9,7 @@ source:
   sha256: 48628bd53a426c9eb9bc066a923acaa0878d1e86129fd5359aee99285f4eed9c
   patches:
     - fix-initialization.patch
+    - fix_libxml2_2.12.patch
 
 build:
   number: 4
@@ -17,7 +18,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython <3                              # [build_platform != target_platform]
     - {{ compiler('c') }}
     - pkg-config
   host:
