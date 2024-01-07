@@ -8,6 +8,8 @@ source:
   url: https://pypi.io/packages/source/l/lxml/lxml-{{ version }}.tar.gz
   sha256: 4432a1d89a9b340bc6bd1201aef3ba03112f151d3f340d9218247dc0c85028ab
   patches:
+    # When removing this patch, remove the associated line in
+    # the build.sh that triggers a recompilation of the file
     - fix_libxml2_2.12.patch
 
 build:
