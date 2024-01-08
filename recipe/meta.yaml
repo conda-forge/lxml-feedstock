@@ -1,4 +1,4 @@
-{% set version = "5.0.1" %}
+{% set version = "5.1.0" %}
 
 package:
   name: lxml
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/l/lxml/lxml-{{ version }}.tar.gz
-  sha256: 4432a1d89a9b340bc6bd1201aef3ba03112f151d3f340d9218247dc0c85028ab
+  sha256: 3eea6ed6e6c918e468e693c41ef07f3c3acc310b70ddd9cc72d9ef84bc9564ca
   patches:
     # When removing this patch, remove the associated line in
     # the build.sh that triggers a recompilation of the file
