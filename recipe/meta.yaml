@@ -1,4 +1,4 @@
-{% set version = "5.1.1" %}
+{% set version = "5.2.1" %}
 
 package:
   name: lxml
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/l/lxml/lxml-{{ version }}.tar.gz
-  sha256: 42a8aa957e98bd8b884a8142175ec24ce4ef0a57760e8879f193bfe64b757ca9
+  sha256: 3f7765e69bbce0906a7c74d5fe46d2c7a7596147318dbc08e4a2431f3060e306
 
 build:
   number: 0
@@ -17,6 +17,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - pkg-config
   host:
     - libxml2
