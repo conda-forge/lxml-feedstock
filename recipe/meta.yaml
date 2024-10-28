@@ -9,7 +9,7 @@ source:
   sha256: 4e109ca30d1edec1ac60cdbe341905dc3b8f55b16855e03a54aaf59e51ec8c6f
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -48,7 +48,12 @@ about:
   home: http://lxml.de/
   # ElementTree comes with a supposedly custom license that is simply MIT-CMU with a different copyright holder.
   license: BSD-3-Clause and MIT-CMU
-  license_file: LICENSES.txt
+  license_file:
+    - LICENSES.txt
+    - LICENSE.txt
+    - doc/licenses/elementtree.txt
+    # doc/licenses/BSD.txt is the same as LICENSE.txt
+    # doc/licenses/GPL.txt is used in test files only, doesn't get packaged
   summary: Pythonic binding for the C libraries libxml2 and libxslt.
   description: |
     The lxml XML toolkit is a Pythonic binding for the C libraries libxml2 and
