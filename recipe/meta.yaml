@@ -9,7 +9,7 @@ source:
   sha256: 2b3a882ebf27dd026df3801a87cf49ff791336e0f94b0fad195db77e01240690
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -20,7 +20,7 @@ requirements:
     - {{ stdlib("c") }}
     - pkg-config
   host:
-    - libxml2
+    - libxml2-devel
     - python
     - pip
     - setuptools
@@ -54,9 +54,9 @@ about:
     - doc/licenses/elementtree.txt
     # doc/licenses/BSD.txt is the same as LICENSE.txt
     # doc/licenses/GPL.txt is used in test files only, doesn't get packaged
-  summary: Pythonic binding for the C libraries libxml2 and libxslt.
+  summary: Pythonic binding for the C libraries libxml2-devel and libxslt.
   description: |
-    The lxml XML toolkit is a Pythonic binding for the C libraries libxml2 and
+    The lxml XML toolkit is a Pythonic binding for the C libraries libxml2-devel and
     libxslt. It is unique in that it combines the speed and XML feature
     completeness of these libraries with the simplicity of a native Python API,
     mostly compatible but superior to the well-known ElementTree API.
