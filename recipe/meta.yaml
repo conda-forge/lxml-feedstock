@@ -38,6 +38,7 @@ test:
   requires:
     - pip
     - jq  # [unix]
+    - libxml2-16 2.14.6
   commands:
     - pip check
     # ensuring that test.py is not contained. Otherwise ZPL-2.0 and GPL-2.0-only licenses needs to be porpagated.
