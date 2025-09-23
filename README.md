@@ -7,13 +7,13 @@ Home: http://lxml.de/
 
 Package license: BSD-3-Clause and MIT-CMU
 
-Summary: Pythonic binding for the C libraries libxml2 and libxslt.
+Summary: Pythonic binding for the C libraries libxml2-devel and libxslt.
 
 Development: https://github.com/lxml/lxml
 
 Documentation: http://lxml.de/index.html#documentation
 
-The lxml XML toolkit is a Pythonic binding for the C libraries libxml2 and
+The lxml XML toolkit is a Pythonic binding for the C libraries libxml2-devel and
 libxslt. It is unique in that it combines the speed and XML feature
 completeness of these libraries with the simplicity of a native Python API,
 mostly compatible but superior to the well-known ElementTree API.
