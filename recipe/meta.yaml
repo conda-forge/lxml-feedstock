@@ -32,9 +32,9 @@ requirements:
 
 test:
   imports:
-    - lxml            # [not win]
-    - lxml.etree      # [not win]
-    - lxml.objectify  # [not win]
+    - lxml
+    - lxml.etree
+    - lxml.objectify
   requires:
     - pip
     - jq  # [unix]
@@ -43,8 +43,6 @@ test:
     # ensuring that test.py is not contained. Otherwise ZPL-2.0 and GPL-2.0-only licenses needs to be porpagated.
     - test_file=$(jq '.files[] | select( . | endswith("/test.py"))' $CONDA_PREFIX/conda-meta/{{ PKG_NAME }}-{{ PKG_VERSION }}-${PKG_BUILD_STRING}.json)  # [unix]
     - if [[ ${test_file} ]]; then echo "found test.py file being packaged ${test_file}"; exit 1; fi  # [unix]
-    - "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\gflags.exe" -i python.exe +sls  # [win]
-    - "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\cdb.exe" -logo log.txt -g -G -o -xn av python -c "import lxml.etree; import lxml.objectify"  # [win]
 
 about:
   home: http://lxml.de/
