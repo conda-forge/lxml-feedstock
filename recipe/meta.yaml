@@ -10,6 +10,8 @@ source:
 
 build:
   number: 2
+  # libxslt is not yet available for win-arm64 (conda-forge/libxslt-feedstock#50)
+  skip: true  # [win and arm64]
 
 requirements:
   build:
