@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lxml-feedstock/
 
 Home: http://lxml.de/
 
-Package license: BSD-3-Clause and MIT-CMU
+Package license: BSD-3-Clause AND MIT-CMU
 
 Summary: Pythonic binding for the C libraries libxml2-devel and libxslt.
 
@@ -17,7 +17,6 @@ The lxml XML toolkit is a Pythonic binding for the C libraries libxml2-devel and
 libxslt. It is unique in that it combines the speed and XML feature
 completeness of these libraries with the simplicity of a native Python API,
 mostly compatible but superior to the well-known ElementTree API.
-
 
 Current build status
 ====================
@@ -234,6 +233,7 @@ mamba repoquery depends lxml --channel conda-forge
 </details>
 
 
+
 About conda-forge
 =================
 
@@ -248,9 +248,7 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
-[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+[Azure](https://azure.microsoft.com/en-us/services/devops/) and [GitHub](https://github.com/)
 it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
@@ -300,6 +298,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@carlodri](https://github.com/carlodri/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@zklaus](https://github.com/zklaus/)
 
